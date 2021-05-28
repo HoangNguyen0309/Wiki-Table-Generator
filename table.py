@@ -6,6 +6,15 @@ numOfRows = df.shape[0]
 numOfColumns = df.shape[1]
 #print(numOfRows)
 #print(numOfColumns)
+
+f = open("output.txt", "w")
+f.write("{| class=\"wikitable\"\n")
+count = 0
 for col in df.columns:
-    print(col)
-#f = open("output.txt", "w")
+    if count == 0:
+        f.write("! " + col)
+    elif count != 0:
+        f.write(" !! " + col)
+    elif count == numOfColumns:
+        f.write(" !! " + col + "\n") 
+    count = count + 1       
