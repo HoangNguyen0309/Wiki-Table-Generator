@@ -2,7 +2,8 @@ import pandas as pd
 import openpyxl
 
 df = pd.read_excel (r'tableexample.xlsx') 
-numOfRows = df[df.columns[0]].count()
-numOfColumns = df[df.rows[0]].count()
+numOfRows = df.shape[0]
+numOfColumns = df.shape[1]
+numOfRows = numOfRows + 1
 print(numOfRows)
 print(numOfColumns)
