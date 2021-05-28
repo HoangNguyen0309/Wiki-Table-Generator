@@ -1,13 +1,8 @@
-# Program to extract number
-# of rows using Python
-import xlrd
- 
-# Give the location of the file
-loc = ("path of file")
- 
-wb = xlrd.open_workbook(loc)
-sheet = wb.sheet_by_index(0)
-sheet.cell_value(0, 0)
- 
-# Extracting number of rows
-print(sheet.nrows)
+import pandas as pd
+import openpyxl
+
+df = pd.read_excel (r'tableexample.xlsx') 
+numOfRows = df[df.columns[0]].count()
+numOfColumns = df[df.rows[0]].count()
+print(numOfRows)
+print(numOfColumns)
