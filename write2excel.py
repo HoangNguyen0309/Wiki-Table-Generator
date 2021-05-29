@@ -1,6 +1,9 @@
 import pandas as pd
 import openpyxl
 import re
+import xlwt
+from xlwt import Workbook
+
 
 headings_list = []
 num_list = []
@@ -38,3 +41,14 @@ for line in lines:
             new_list = []
         count = count + 1
 print(cells)
+
+wb = Workbook()
+sheet1 = wb.add_sheet('Sheet 1')
+
+for i in range(len(headings_list)):
+    sheet1.write(i, 0, headings_list[i])
+
+for i in range(len(cells)):
+    for x in range(len(headings_list)):
+        sheet1.write(x, i, cells[i][x])
+wb.save('xlwt example.xls')
