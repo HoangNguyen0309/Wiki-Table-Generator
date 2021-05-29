@@ -48,13 +48,13 @@ sheet1 = wb.add_sheet('Sheet 1')
 for i in range(len(headings_list)):
     sheet1.write(0, i, headings_list[i]) #y,x, argv
 
-
+count2 = 0
 for i in range(len(cells)):
-    count2 = 0
     i = i + 1
     for x in range(len(cells[0])):
+        print(count2)
         sheet1.write(i, x, cells[count2][x])
         #print(cells[count2][x])
     count2 = count2 + 1
 
-wb.save('example3.xls')
+#wb.save('example3.xls')
