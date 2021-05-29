@@ -49,11 +49,12 @@ for i in range(len(headings_list)):
     sheet1.write(0, i, headings_list[i]) #y,x, argv
 
 
-for i in range(len(headings_list)):
+for i in range(len(cells)):
     count2 = 0
     i = i + 1
-    for x in range(len(cells)):
+    for x in range(len(cells[0])):
         sheet1.write(i, x, cells[count2][x])
-        count2 = count2 + 1
+        #print(cells[count2][x])
+    count2 = count2 + 1
 
-wb.save('example.xls')
+wb.save('example3.xls')
