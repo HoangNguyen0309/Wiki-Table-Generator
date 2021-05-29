@@ -8,13 +8,13 @@ num_list2 = []
 
 def parse(line):
     for x in range(len(line)):
+        if x == 0:
+            num_list2.append(x+1)
         if line[x] == '!' and line[x+1] == '!':
             num_list.append(x-1)
             num_list2.append(x+2)
-        if line[x] == '!' and line[x+1] != '!':
-            num_list2.append(x+1)
-    if x == len(line):
-        num_list.append(x)
+        if x == len(line):
+            num_list.append(x)
 def get_headings(num1, num2, line):
     headings_list.append(line[num1: num2])
 f = open('file.txt') # Open file on read mode
@@ -28,5 +28,6 @@ for line in lines:
         for i in range(len(num_list)):
             get_headings(num_list2[i], num_list[i], line)
 
-
+print(num_list2)
+print(num_list)
 print(headings_list)
