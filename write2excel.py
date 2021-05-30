@@ -54,7 +54,6 @@ for i in range(len(cells)):
     for x in range(len(cells[0])):
         print(count2)
         sheet1.write(i, x, cells[count2][x])
-        #print(cells[count2][x])
     count2 = count2 + 1
 
 wb.save('example4.xls')
