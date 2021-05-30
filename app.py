@@ -1,4 +1,5 @@
 from flask import *  
+from table import write2text
 app = Flask(__name__)  
 
 @app.route('/')  
@@ -10,7 +11,10 @@ def success():
     if request.method == 'POST':  
         f = request.files['file']  
         f.save(f.filename)  
-        return render_template("success.html", name = f.filename)  
-
+        write2text(f.filename)
+        return render_template("success.html", filename='output.txt')
+@app.route('/database_download/<filename>')
+def database_download(filename):
+    return send_file(filename)
 if __name__ == '__main__':  
     app.run(debug = True)  
