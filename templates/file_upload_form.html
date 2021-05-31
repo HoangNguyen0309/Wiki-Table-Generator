@@ -3,9 +3,15 @@
     <title>upload</title>  
 </head>  
 <body>  
+    <h1>Upload excel</h1>
     <form action = "/success" method = "post" enctype="multipart/form-data">  
         <input type="file" name="file" />  
         <input type = "submit" value="Upload">  
+    </form>
+    <h2>Upload text</h2>
+    <form action="/success2" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <input type="submit" value="Upload" />
     </form>  
 </body>  
-</html>  
+</html>
