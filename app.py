@@ -1,6 +1,7 @@
 from flask import *  
-from table import write2text
-from write2excel import writetoexcel
+from excel2table import write2text
+from table2excel import writetoexcel
+from excel2table2 import write2textSingle
 
 app = Flask(__name__)  
 
@@ -22,6 +23,13 @@ def success2():
         f.save(f.filename)  
         writetoexcel(f.filename)
         return render_template("success2.html", filename='output.xls')
+@app.route('/success3', methods = ['POST'])  
+def success3():  
+    if request.method == 'POST':  
+        f = request.files['file']  
+        f.save(f.filename)  
+        write2textSingle(f.filename)
+        return render_template("success3.html", filename='output.txt')
 @app.route('/database_download/<filename>')
 def database_download(filename):
     return send_file(filename, as_attachment=True)
