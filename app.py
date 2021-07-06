@@ -10,6 +10,8 @@ def upload():
     return render_template("file_upload_form.html")  
     
 @app.route('/sitemap.xml')
+def static_from_root():
+    return send_from_directory(app.static_folder, request.path[1:])
 
 @app.route('/success', methods = ['POST'])  
 def success():  
