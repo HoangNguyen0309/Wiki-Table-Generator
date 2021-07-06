@@ -8,6 +8,8 @@ app = Flask(__name__)
 @app.route('/')  
 def upload():  
     return render_template("file_upload_form.html")  
+    
+@app.route('/sitemap.xml')
 
 @app.route('/success', methods = ['POST'])  
 def success():  
