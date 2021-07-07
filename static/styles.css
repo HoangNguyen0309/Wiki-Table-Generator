@@ -1,35 +1,50 @@
-body {
+* {
+    font-family: Verdana, Geneva, sans-serif;
+    text-decoration: none;
     background: Linen;
-    margin-top: 50px;
-    margin-left: 100px;
-    }
+}
+
+
+html {
+    height: 100%;
+}
+
+
+.mainBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 4rem;
+}
+
+.title {
+    font-size: 3rem;
+    color: FireBrick
+}
+
 p {
     font-family: Georgia, serif;
     font-size: 1.2em;
     color: DarkSlateGray;
-    }
+}
+
 h1 {
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 1.5em;
-    color: FireBrick;
-    }
-h2 {
-    font-family: Verdana, Geneva, sans-serif;
     font-size: 1.5em;
     color: FireBrick;
 }
+
+h2 {
+    font-size: 1.5em;
+    color: FireBrick;
+}
+
 h3 {
-    font-family: Verdana, Geneva, sans-serif;
     font-size: 2.5em;
     color: FireBrick;
 }
-.centered {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
-}
+
 .notes {
     font-family: Georgia, serif;
     font-size: 1.2em;
