@@ -1,30 +1,36 @@
 <html>
 <head> 
-    <link rel="stylesheet" href="/static/styles.css?q=1280549852">   
+    <link rel="stylesheet"  href="/static/styles.css?q=1280549859">   
     <title>upload</title> 
-    <h3>Excel to MediaWiki</h3> 
 </head>  
-<body class="centered"> 
-    <p>Upload a text file in MediaWiki format to turn into an excel</p>
-    <p>Upload a an excel file to turn into WikiMedia format</p>
-    <p>If you uploaded the wrong file format, the webpage will throw an error.</p>
-    <h1>Upload excel</h1>
-    <p>Excel file will be turned into a .txt file in single mark "|" MediaWiki format.</p>
-    <form action = "/success" method = "post" enctype="multipart/form-data">  
-        <input type="file" name="file" />  
-        <input type = "submit" value="Upload">  
-    </form>
-    <p>Excel file will be turned into a .txt file in double mark "||" MediaWiki format.</p>
-    <form action = "/success3" method = "post" enctype="multipart/form-data">  
-        <input type="file" name="file" />  
-        <input type = "submit" value="Upload">  
-    </form>
-    <h2>Upload text</h2>
-    <p>Text file containing the table in MediaWiki format will be turned into an excel. (Currently only working with single mark table)</p>
-    <form action="/success2" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" />
-        <input type="submit" value="Upload" />
-    </form>  
-    <p class="notes">For any problems, contact me at nguye586@purdue.edu</p>
+
+<body> 
+    <div class="mainBody">
+        <div class="title">Excel to MediaWiki</div> 
+        <div class=contents">
+
+            <div>Upload a text file in MediaWiki format to turn into an excel</div>
+            <div>Upload a an excel file to turn into WikiMedia format</div>
+            <div>If you uploaded the wrong file format, the webpage will throw an error.</div>
+            <h1>Upload excel</h1>
+            <div>Excel file will be turned into a .txt file in single mark "|" MediaWiki format.</div>
+            <form action = "/success" method = "post" enctype="multipart/form-data">  
+                <input type="file" name="file" />  
+                <input type = "submit" value="Upload">  
+            </form>
+            <div>Excel file will be turned into a .txt file in double mark "||" MediaWiki format.</div>
+            <form action = "/success3" method = "post" enctype="multipart/form-data">  
+                <input type="file" name="file" />  
+                <input type = "submit" value="Upload">  
+            </form>
+            <h2>Upload text</h2>
+            <div>Text file containing the table in MediaWiki format will be turned into an excel. (Currently only working with single mark table)</div>
+            <form action="/success2" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" />
+                <input type="submit" value="Upload" />
+            </form>  
+        </div>
+        <p class="notes">For any problems, contact me at nguye586@purdue.edu</div>
+    </div>
 </body>  
 </html>
