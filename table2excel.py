@@ -1,7 +1,3 @@
-import pandas as pd
-import openpyxl
-import re
-import xlwt
 from xlwt import Workbook
 
 def writetoexcel(filename):
