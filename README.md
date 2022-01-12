@@ -8,7 +8,7 @@ Generates a table in Excel from a text file in the format of WikiMedia.
 
 To install Python dependencies:
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 Run developer server:
 ```
