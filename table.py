@@ -1,3 +1,4 @@
+# ananylze and desemble the table
 import pandas as pd
 
 def write2text(file_name):
