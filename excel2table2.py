@@ -1,6 +1,6 @@
-import pandas as pd
-
 # converts excel spreadsheet to double quotation 
+
+import pandas as pd
 
 def write2textSingle(file_name):
     df = pd.read_excel(file_name) 
