@@ -4,7 +4,13 @@ Generates a table in single mark or double mark WikiMedia format by uploading a 
 
 Generates a table in Excel from a text file in the format of WikiMedia.
 
+### Running
+
 To install Python dependencies:
 ```
 pip install requirements.txt
+```
+Run developer server:
+```
+python app.py
 ```

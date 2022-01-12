@@ -1,5 +1,4 @@
 import pandas as pd
-import openpyxl
 
 def write2text(file_name):
     df = pd.read_excel(file_name) 

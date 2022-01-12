@@ -1,5 +1,4 @@
 import pandas as pd
-import openpyxl
 
 # converts excel spreadsheet to double quotation 
 
